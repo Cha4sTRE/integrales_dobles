@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cj.calculo.integrales_dobles.controllers.CalculadoraController">
+   <children>
+      <AnchorPane layoutX="65.0" layoutY="14.0" prefHeight="96.0" prefWidth="817.0" style="-fx-background-color: #c9f4b5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="119.0" layoutY="-52.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="67.0" prefWidth="695.0" text="Calculadora de Integrales Dobles">
+                     <font>
+                        <Font name="FreeSans Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane layoutY="96.0" prefHeight="385.0" prefWidth="817.0" style="-fx-background-color: #b5f4eb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="316.0" layoutY="17.0" prefHeight="555.0" prefWidth="1131.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="56.0" prefWidth="378.0" text="Parametros de Integral">
+                     <font>
+                        <Font name="FreeSans Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="570.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="89.0" text="Formula:">
+                           <font>
+                              <Font name="FreeSans" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtFormula" prefHeight="24.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="570.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="175.0" text="Limite Inferior:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="16.0" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="limInfX" prefHeight="24.0" prefWidth="54.0" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="16.0" text="y">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="limInfY" prefHeight="24.0" prefWidth="54.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="570.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="194.0" text="Limite Superior:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="16.0" text="x">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="LimSupX" prefHeight="24.0" prefWidth="54.0" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="16.0" text="y">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="limSupY" prefHeight="24.0" prefWidth="54.0" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="55.0" prefWidth="378.0" text="Tipo de Calculo">
+                     <font>
+                        <Font name="FreeSans Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="570.0">
+                     <children>
+                        <RadioButton fx:id="areaRadio" mnemonicParsing="false" text="Area">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="FreeSans" size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tipoCalculoGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="volumenRadio" mnemonicParsing="false" text="Volumen" toggleGroup="$tipoCalculoGroup">
+                           <font>
+                              <Font name="FreeSans" size="15.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#btnCalcular" text="Calcular">
+                     <font>
+                        <Font name="FreeSans Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="570.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="129.0" text="Resultado:">
+                           <font>
+                              <Font name="FreeSans" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblResultado" prefHeight="39.0" prefWidth="165.0">
+                           <font>
+                              <Font name="FreeSans" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
